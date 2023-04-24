@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert_student</title>
+</head>
+<body>
+    <center>
+        <h1>Insert Student Details</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            <table>
+                <tr>
+                    <td>
+                        <label for="si">Student ID :</label>
+                        <input type="number" name="si" id="si">
+                        <br><br>
+
+                        <label for="sn">Student Name :</label>
+                        <input type="text" name="sn" id="sn">
+                        <br><br>
+
+                        <label for="ph">Phone Number :</label>
+                        <input type="number" name="ph" id="ph">
+                        <br><br>
+
+                        <label for="pe">Percentage (%) : </label>
+                        <input type="number" name="pe" id="pe">
+                        <br><br>
+
+                        <label for="re">Remarks :</label>
+                        <input type="text" name="re" id="re">
+                        <br><br>
+
+                        
+
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Insert Student">
+            
+        </form>
+    </center>
+</body>
+</html>

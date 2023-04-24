@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Displaying  Student Details </h1>
+        <table border="3px">
+            <tr>
+                <td>Student ID</td>
+                <td>Student Name</td>
+                <td>Phone Number</td>
+                <td>Percentage</td>
+                <td>Remarks</td>
+            </tr>
+            {% for i in student %}
+
+                <tr>
+                    <td align="center">{{ i.sid }}</td>
+                    <td align="center">{{ i.sname }}</td>
+                    <td align="center">{{ i.phone }}</td>
+                    <td align="center">{{ i.percentage }}</td>
+                    <td align="center">{{ i.remarks }}</td>
+                </tr>
+
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>

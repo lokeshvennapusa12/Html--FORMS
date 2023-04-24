@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>update_student</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="si">Student ID</label>
+            <select name="si" id="si">
+                {% for i in SO %}
+                    <option value="{{i}}">{{ i.sid }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+
+            <label for="sn">Student Name :</label>
+            <input type="text" name="sn" id="sn">
+            <br><br>
+
+            <label for="ph">Phone Number :</label>
+            <input type="number" name="ph" id="ph">
+            <br><br>
+
+            <label for="pe">Percentage (%) : </label>
+            <input type="number" name="pe" id="pe">
+            <br><br>
+
+            <label for="re">Remarks :</label>
+            <input type="text" name="re" id="re">
+            <br><br>
+
+            <input type="submit" value="update_student">
+        </form>
+    </center>
+</body>
+</html>

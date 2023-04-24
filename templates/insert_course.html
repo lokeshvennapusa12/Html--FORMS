@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert_course</title>
+</head>
+<body>
+    <center>
+        <h1>Insert Course Details</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            <table>
+                <tr>
+                    <label for="ci">Course ID</label>
+                    <input type="number" name="ci" id="ci">
+                    <br><br>
+
+                    <label for="si">Student Id</label>
+                    <select name="si" id="si" multiple>
+                        {% for i in sid %}
+
+                            <option value="{{i}}">{{ i.sid }}</option>
+
+                        {% endfor %}
+                        
+                    </select>
+                    <br><br>
+
+                    <label for="co">Course</label>
+                    <input type="text" name="co" id="co">
+                    <br><br>
+
+                    <label for="clg">College</label>
+                    <input type="text" name="clg" id="clg">
+                    <br><br>
+
+
+                </tr>
+            </table>
+            <input type="submit" value="Insert Course">
+        </form>
+    </center>
+</body>
+</html>
